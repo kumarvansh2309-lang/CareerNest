@@ -1,0 +1,30 @@
+{
+  "name": "careernest-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "nodemon server/index.js",
+    "dev:web": "next dev",
+    "build": "next build",
+    "start": "concurrently \"npm:start:api\" \"npm:start:web\"",
+    "start:api": "node server/index.js",
+    "start:web": "next start",
+    "db:setup": "node server/db/setup.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "next": "^14.2.21",
+    "pg": "^8.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
